@@ -6,10 +6,11 @@ services:
   - docker
   
 script:
-  - echo "docker"
-  - docker pull hello-world 
-  - docker run -d hello-world
-  - docker ps
+  - chmod +x hello.py
+  - ./hello.py 
+  - docker build --tag hello:v1 .
+  - docker images
+  - docker run hello:v1
  
 after_script:
   - echo "Image built and run sucessfully"
