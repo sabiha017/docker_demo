@@ -6,6 +6,7 @@ services:
   - docker
   
 script:
+  - echo "docker"
   - docker pull hello-world 
   - docker run -d hello-world
   - docker ps
