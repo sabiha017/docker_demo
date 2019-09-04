@@ -11,6 +11,7 @@ script:
   - docker build --tag hello:v1 .
   - docker images
   - docker run hello:v1
+  - docker ps
  
 after_script:
   - echo "Image built and run sucessfully"
